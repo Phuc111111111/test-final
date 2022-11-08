@@ -1,0 +1,26 @@
+<div class="container-xl">
+  <h1 class="text-center mt-5 mb-5">Customer Detail</h1>
+  <div class="customer-detail">
+    <div class="customer-feature"></div>
+    <img
+      src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80"
+      alt=""
+      class="customer-img"
+    />
+    <div class="customer-info">
+      <p class="text-capitalize">First Name: {{ customer?.firstName }}</p>
+      <p class="text-capitalize">Last Name: {{ customer?.lastName }}</p>
+      <p class="text-capitalize">Gender: {{ customer?.gender }}</p>
+      <p class="text-capitalize">Address: {{ customer?.address }}</p>
+      <p class="text-capitalize">City: {{ customer?.city }}</p>
+    </div>
+    <div class="customer-feture">
+      <button class="btn btn-success btn-back">
+        <a [routerLink]="['/customers']">View all customer</a>
+      </button>
+      <button class="btn btn-success btn-back">
+        <a [routerLink]="['/orders', customer.id]">Customer Order</a>
+      </button>
+    </div>
+  </div>
+</div>
